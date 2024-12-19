@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <title>daniil.fyi</title>
   <style>
     * {
@@ -11,13 +13,16 @@
       padding: 0;
     }
 
-    /*@media (prefers-color-scheme: dark) {
-      :root {
-        --background-color: #000;
-        --color: #eee;
-        --border: rgba(255, 255, 255, 0.15);
-      }
-    }*/
+    :root {
+      font-family: Inter, sans-serif;
+      font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @supports (font-variation-settings: normal) {
+      :root { font-family: InterVariable, sans-serif; }
+    }
 
     @keyframes fadeIn {
         to {
@@ -26,7 +31,9 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      color: #eee;
+      font-size: 14px;
+      font-weight: normal;
       background-color: #000;
       --border: rgba(255, 255, 255, 0.15);
       padding: 24px;
@@ -34,15 +41,15 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 48px;
     }
 
     .grid-item {
       display: block;
       position: relative;
       overflow: hidden;
-      border-radius: 10px;
+      border-radius: 8px;
       transition: transform 0.2s ease-in-out;
       opacity: 0;
       animation: fadeIn 0.5s ease-in forwards;
@@ -59,8 +66,12 @@
     }
 
     .grid-item:hover {
-      transform: scale(1.02);
+      transform: scale(1.05);
       cursor: pointer;
+    }
+
+    .about {
+      padding: 24px 0;
     }
 
     img,
@@ -69,7 +80,7 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
     }
 
     video {
@@ -79,6 +90,7 @@
 </head>
 <body>
   <div class="grid">
+    <!-- Watchers -->
     <div class="grid-item">
       <img 
         src="media/placeholder.webp" 
@@ -127,22 +139,8 @@
         alt="Watchers Logo" 
         loading="lazy">
     </div>
-    <div class="grid-item">
-      <img 
-        src="media/placeholder.webp" 
-        srcset="media/okko-5.webp 480w, media/okko-5.webp 800w, media/okko-5.webp 1200w" 
-        sizes="(max-width: 600px) 100vw, 50vw" 
-        alt="Watchers Logo" 
-        loading="lazy">
-    </div>
-    <div class="grid-item">
-      <img 
-        src="media/placeholder.webp" 
-        srcset="media/okko.webp 480w, media/okko.webp 800w, media/okko.webp 1200w" 
-        sizes="(max-width: 600px) 100vw, 50vw" 
-        alt="Watchers Logo" 
-        loading="lazy">
-    </div>
+
+    <!-- Okko -->
     <div class="grid-item">
       <img 
         src="media/placeholder.webp" 
@@ -176,12 +174,394 @@
         loading="lazy">
     </div>
     <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/okko-5.webp 480w, media/okko-5.webp 800w, media/okko-5.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/okko-6.webp 480w, media/okko-6.webp 800w, media/okko-6.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
       <video autoplay playsinline muted loop loading="lazy">
-        <source src="media/okko-6.mp4" type="video/mp4" media="(max-width: 600px)">
-        <source src="media/okko-6.mp4" type="video/mp4" media="(max-width: 1200px)">
-        <source src="media/okko-6.mp4" type="video/mp4">
+        <source src="media/okko-7.mp4" type="video/mp4" media="(max-width: 600px)">
+        <source src="media/okko-7.mp4" type="video/mp4" media="(max-width: 1200px)">
+        <source src="media/okko-7.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/okko-8.webp 480w, media/okko-8.webp 800w, media/okko-8.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/okko-9.webp 480w, media/okko-9.webp 800w, media/okko-9.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+
+    <!-- Key -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/key-1.webp 480w, media/key-1.webp 800w, media/key-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/key-2.webp 480w, media/key-2.webp 800w, media/key-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/key-3.webp 480w, media/key-3.webp 800w, media/key-3.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/key-4.webp 480w, media/key-4.webp 800w, media/key-4.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/key-5.webp 480w, media/key-5.webp 800w, media/key-5.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/key-6.webp 480w, media/key-6.webp 800w, media/key-6.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Teleset Plus -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/teleset-plus-1.webp 480w, media/teleset-plus-1.webp 800w, media/teleset-plus-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/teleset-plus-2.webp 480w, media/teleset-plus-2.webp 800w, media/teleset-plus-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/teleset-plus-3.webp 480w, media/teleset-plus-3.webp 800w, media/teleset-plus-3.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/teleset-plus-4.webp 480w, media/teleset-plus-4.webp 800w, media/teleset-plus-4.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- VSF -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/vsf-1.webp 480w, media/vsf-1.webp 800w, media/vsf-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Salaris -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/salaris-1.webp 480w, media/salaris-1.webp 800w, media/salaris-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/salaris-2.webp 480w, media/salaris-2.webp 800w, media/salaris-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Protargol -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/protargol-1.webp 480w, media/protargol-1.webp 800w, media/protargol-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/protargol-2.webp 480w, media/protargol-2.webp 800w, media/protargol-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/protargol-3.webp 480w, media/protargol-3.webp 800w, media/protargol-3.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/protargol-4.webp 480w, media/protargol-4.webp 800w, media/protargol-4.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Smena -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/smena-1.webp 480w, media/smena-1.webp 800w, media/smena-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/smena-2.webp 480w, media/smena-2.webp 800w, media/smena-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Magika -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/magika-1.webp 480w, media/magika-1.webp 800w, media/magika-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/magika-2.webp 480w, media/magika-2.webp 800w, media/magika-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/magika-3.webp 480w, media/magika-3.webp 800w, media/magika-3.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/magika-4.webp 480w, media/magika-4.webp 800w, media/magika-4.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/magika-5.webp 480w, media/magika-5.webp 800w, media/magika-5.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/magika-6.webp 480w, media/magika-6.webp 800w, media/magika-6.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/magika-7.webp 480w, media/magika-7.webp 800w, media/magika-7.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/magika-8.webp 480w, media/magika-8.webp 800w, media/magika-8.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Atto -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/atto-1.webp 480w, media/atto-1.webp 800w, media/atto-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/atto-2.webp 480w, media/atto-2.webp 800w, media/atto-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/atto-3.webp 480w, media/atto-3.webp 800w, media/atto-3.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/atto-4.webp 480w, media/atto-4.webp 800w, media/atto-4.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/atto-5.webp 480w, media/atto-5.webp 800w, media/atto-5.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/atto-6.webp 480w, media/atto-6.webp 800w, media/atto-6.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/atto-7.webp 480w, media/atto-7.webp 800w, media/atto-7.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Mascot -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/mascot-1.webp 480w, media/mascot-1.webp 800w, media/mascot-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/mascot-2.webp 480w, media/mascot-2.webp 800w, media/mascot-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/mascot-3.webp 480w, media/mascot-3.webp 800w, media/mascot-3.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/mascot-4.webp 480w, media/mascot-4.webp 800w, media/mascot-4.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Dentist.gr -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/dentist-gr-1.webp 480w, media/dentist-gr-1.webp 800w, media/dentist-gr-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/dentist-gr-2.webp 480w, media/dentist-gr-2.webp 800w, media/dentist-gr-2.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
+    </div>
+
+    <!-- Dude -->
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.webp" 
+        srcset="media/dude-1.webp 480w, media/dude-1.webp 800w, media/dude-1.webp 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Atto" 
+        loading="lazy">
     </div>
   </div>
 </body>
