@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daniil.fyi</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*@media (prefers-color-scheme: dark) {
+      :root {
+        --background-color: #000;
+        --color: #eee;
+        --border: rgba(255, 255, 255, 0.15);
+      }
+    }*/
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      --border: rgba(255, 255, 255, 0.15);
+      padding: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.2s ease-in-out;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in forwards;
+    }
+
+    .grid-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--border);
+      pointer-events: none;
+      z-index: 1;
+      border-radius: inherit;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.02);
+    }
+
+    img,
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    video {
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/watchers.png 480w, media/watchers.png 800w, media/watchers.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/watchers-1.png 480w, media/watchers-1.png 800w, media/watchers-1.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/watchers-2.png 480w, media/watchers-2.png 800w, media/watchers-2.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/watchers-3.png 480w, media/watchers-3.png 800w, media/watchers-3.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/watchers-4.png 480w, media/watchers-4.png 800w, media/watchers-4.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/watchers-5.png 480w, media/watchers-5.png 800w, media/watchers-5.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/okko-5.png 480w, media/okko-5.png 800w, media/okko-5.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/okko.png 480w, media/okko.png 800w, media/okko.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/okko-1.png 480w, media/okko-1.png 800w, media/okko-1.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/okko-2.png 480w, media/okko-2.png 800w, media/okko-2.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/okko-3.png 480w, media/okko-3.png 800w, media/okko-3.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <img 
+        src="media/placeholder.png" 
+        srcset="media/okko-4.png 480w, media/okko-4.png 800w, media/okko-4.png 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        alt="Watchers Logo" 
+        loading="lazy">
+    </div>
+    <div class="grid-item">
+      <video autoplay playsinline muted loop loading="lazy">
+        <source src="media/okko-6.mp4" type="video/mp4" media="(max-width: 600px)">
+        <source src="media/okko-6.mp4" type="video/mp4" media="(max-width: 1200px)">
+        <source src="media/okko-6.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</body>
+</html>
